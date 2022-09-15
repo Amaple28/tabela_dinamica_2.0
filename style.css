@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  /* Apagar barra de scroll */
+  /* overflow: hidden; */
+}
+
+/* body */
+body {
+  background-image: url("https://assets.website-files.com/56167e908d7696d210cb5ff4/612d358d99421f22e0cd8ac3_como-vender-frutas-e-verduras-capa.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+
+}
+
+/* Base da tabela */
+table {
+  max-width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: arial;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+  padding: 40px 30px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.table td:last-child {
+  border-right: 0;
+}
+
+.table tbody td {
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.404);
+}
+
+.tdNome{
+  text-align: start !important;
+}
+
+.table thead th {
+  font-weight: normal;
+  background-color: #4A1211;
+  color: #fff;
+  font-size: 60px;
+  text-align: center;
+}
+
+.produto{
+  text-align: left;
+}
+
+/* linha item */
+.linha {
+  transition: .5s;
+  background-color: #ff0000;
+}
+
+
+/* para resoluções de até 767px */
+@media (max-width: 767px) {
+
+  /* Tabela responsiva */
+  .table-responsive {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  /*  Tabela funcionando como um bloco  */
+  .table-responsive thead,
+  .table-responsive tbody,
+  .table-responsive th,
+  .table-responsive td,
+  .table-responsive tr {
+    display: block;
+  }
+
+  /* Defino um tamanho para as células */
+  .table-responsive td,
+  .table-responsive th {
+    height: 35px;
+  }
+
+  .table thead th {
+    font-size: 16px;
+  }
+
+  .table th,
+  .table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  /* thead é “flotado” esquerda para auxiliar na responsividade */
+  .table-responsive thead {
+    float: left;
+  }
+
+  .table-responsive tbody {
+    width: auto;
+    position: relative;
+
+    overflow-x: auto;
+    /* scroll horizontal */
+    -webkit-overflow-scrolling: touch;
+    /* Funcionamento para dispositivos touch */
+    white-space: nowrap;
+  }
+
+  /*  Posicionando linhas lado-a-lado  */
+  .table-responsive tbody tr {
+    display: inline-block;
+  }
+
+  .table td:last-child {
+    border-right: #d0d5d8 solid 1px;
+  }
+}
+
+tbody tr{
+  animation: animacaoIn 1s linear;  
+}
+
+.subtitle{
+  line-height: 10px;
+}
+
+@keyframes animacaoIn {
+  from{
+    opacity: .1;
+  }
+  to{
+    opacity: 1;
+  }
+  
+}
